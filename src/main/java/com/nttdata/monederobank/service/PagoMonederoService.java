@@ -10,4 +10,5 @@ public interface PagoMonederoService {
   PagoMonederoModel create(PagoMonederoModel pago);
   PagoMonederoModel update(PagoMonederoModel pago);
   void delete(String id);
+  List<PagoMonederoModel> findById(String id);
 }

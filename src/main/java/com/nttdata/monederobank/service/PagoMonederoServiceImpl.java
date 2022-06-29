@@ -30,4 +30,9 @@ public class PagoMonederoServiceImpl implements PagoMonederoService {
   public void delete(String id) {
     pagoMonederoRepository.findById(id);
   }
+
+  @Override
+  public List<PagoMonederoModel> findById(String id) {
+    return pagoMonederoRepository.findByID(id);
+  }
 }

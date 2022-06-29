@@ -41,4 +41,9 @@ public class PagoMonederoController {
     pagoMonederoService.delete(id);
     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
+
+  @GetMapping("/{id}")
+  public List<PagoMonederoModel> findById(@PathVariable("id") String id) {
+    return pagoMonederoService.findById(id);
+  }
 }
